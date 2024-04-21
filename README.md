@@ -60,6 +60,6 @@ These can be used in the `PRINT` and `LET` command.
 - `MUL`: Multiply two variables `MUL A B`
 - `DIV`: Divide two variables `DIV A B`
 
-## License
+## Licence
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENCE](LICENCE) file for details
+This project is licenced under the GNU General Public Licence v3.0 - see the [LICENCE](LICENCE) file for details
