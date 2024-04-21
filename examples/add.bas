@@ -1,0 +1,3 @@
+10 LET A = 10
+20 LET B = 20
+30 PRINT ADD A B

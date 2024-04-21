@@ -1,0 +1,3 @@
+10 LET A = 2
+20 LET B = 2
+30 PRINT MUL A B

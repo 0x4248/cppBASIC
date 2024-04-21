@@ -1,0 +1,3 @@
+10 LET A = 5
+20 LET B = 10
+30 PRINT SUB A B

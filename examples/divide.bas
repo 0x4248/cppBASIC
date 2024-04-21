@@ -1,0 +1,3 @@
+10 LET A = 2
+20 LET B = 4
+30 PRINT DIV A B
