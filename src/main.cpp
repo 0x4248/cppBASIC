@@ -156,6 +156,9 @@ void run_program() {
         } else if (command == "GOTO") {
             int line_number = std::stoi(tokens[2]);
             i = line_number - 1;        
+        } else if (command == "WAIT") {
+            int time = std::stoi(tokens[2]);
+            std::this_thread::sleep_for(std::chrono::milliseconds(time));
         } else if (command == "END") {
             break;
         }
