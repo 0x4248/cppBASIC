@@ -50,6 +50,8 @@ The output will be:
 
 - `LET`: Assign a value to a variable `LET A = 5`
 - `PRINT`: Print a value `PRINT A`
+- `GOTO`: Go to a line number `GOTO 10`
+- `WAIT`: Wait for a number of milliseconds `WAIT 5`
 
 ### Arithmetic operations
 
