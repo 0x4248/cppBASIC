@@ -141,7 +141,6 @@ void run_program() {
                 for(int i = 2; i < tokens.size(); i++){
                     expression += tokens[i] + " ";
                 }
-                std::cout << "Expression: " << expression << std::endl;
                 float result = evaluate_expression(expression);
                 std::cout << result << std::endl;
             }
