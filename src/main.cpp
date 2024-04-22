@@ -9,10 +9,19 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include <thread>
 
 #include "util.h"
 #include "global.h"
 
+
+void print(std::string message){
+    std::this_thread::sleep_for(std::chrono::milliseconds(20));
+    for (char c : message){
+        std::cout << c;
+    }
+    std::cout << std::endl;
+}
 
 float evaluate_expression(std::string expression){
     std::vector<std::string> tokens = tokenize(expression);
@@ -130,11 +139,11 @@ void run_program() {
                     output += tokens[i] + " ";
                 }
                 output = output.substr(1, output.size() - 3);
-                std::cout << output << std::endl;
+                print(output);
             }
             else if(tokens.size() == 3){
                 int index = find_variable(tokens[2], variables);
-                std::cout << values[index] << std::endl;
+                print(std::to_string(values[index]));
             }
             else if(is_expression(tokens[2])){
                 std::string expression = "";
@@ -142,8 +151,11 @@ void run_program() {
                     expression += tokens[i] + " ";
                 }
                 float result = evaluate_expression(expression);
-                std::cout << result << std::endl;
+                print(std::to_string(result));
             }
+        } else if (command == "GOTO") {
+            int line_number = std::stoi(tokens[2]);
+            i = line_number - 1;        
         } else if (command == "END") {
             break;
         }
@@ -178,7 +190,7 @@ void command_line(){
                 if (lines[i] == ""){
                     continue;
                 }
-                std::cout << lines[i] << std::endl;
+                print(std::to_string(i) + " " + lines[i]);
             }
         }
 
