@@ -182,12 +182,6 @@ void command_line(){
             }
         }
 
-        else if(command == "LSVAR"){
-            for(int i = 0; i < variables.size(); i++){
-                std::cout << variables[i] << " = " << values[i] << std::endl;
-            }
-        }
-
         else if(command == "CLEAR"){
             std::cout << "\033[2J\033[1;1H";
         }
