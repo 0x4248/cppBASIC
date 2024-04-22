@@ -163,6 +163,7 @@ void run_program() {
             break;
         }
     }
+    std::cout << "READY" << std::endl;
 }
     
 void command_line(){
@@ -173,7 +174,7 @@ void command_line(){
     std::cout << "cppBASIC v1.0" << std::endl;
     std::cout << "10,000 LINES FREE. TYPE 'QUIT' TO EXIT" << std::endl;
     while(true){
-        std::cout << "";
+        std::cout << "> ";
         std::getline(std::cin, command);
         if(command == "QUIT"){
             break;
