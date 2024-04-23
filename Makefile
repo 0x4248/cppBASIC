@@ -18,6 +18,8 @@ CXXFLAGS = -Wall -Wextra -pedantic -std=c++11
 
 TARGET = cppBASIC
 
+all: $(BUILD_DIR)/$(TARGET)
+
 $(BUILD_DIR)/$(TARGET): $(OBJ_FILES)
 	$(CXX) $(CXXFLAGS) $(INC_FLAGS) $^ -o $@
 
