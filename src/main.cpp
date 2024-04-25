@@ -14,7 +14,6 @@
 #include "util.h"
 #include "global.h"
 
-
 void print(std::string message){
     std::this_thread::sleep_for(std::chrono::milliseconds(20));
     for (char c : message){
@@ -46,6 +45,7 @@ float evaluate_expression(std::string expression){
             return values[index1] + values[index2];
         }
     }
+
     else if(tokens[0] == "SUB"){
         try {
             float num1 = std::stof(tokens[1]);
@@ -61,6 +61,7 @@ float evaluate_expression(std::string expression){
             return values[index1] - values[index2];
         }
     }
+
     else if(tokens[0] == "MUL"){
         try {
             float num1 = std::stof(tokens[1]);
@@ -76,6 +77,7 @@ float evaluate_expression(std::string expression){
             return values[index1] * values[index2];
         }
     }
+
     else if(tokens[0] == "DIV"){
         try {
             float num1 = std::stof(tokens[1]);
@@ -91,6 +93,7 @@ float evaluate_expression(std::string expression){
             return values[index1] / values[index2];
         }
     }
+
     else {
         std::cerr << "Invalid expression operator" << std::endl;
         return 0;
@@ -140,12 +143,10 @@ void run_program() {
                 }
                 output = output.substr(1, output.size() - 3);
                 print(output);
-            }
-            else if(tokens.size() == 3){
+            } else if(tokens.size() == 3){
                 int index = find_variable(tokens[2], variables);
                 print(std::to_string(values[index]));
-            }
-            else if(is_expression(tokens[2])){
+            } else if(is_expression(tokens[2])){
                 std::string expression = "";
                 for(int i = 2; i < tokens.size(); i++){
                     expression += tokens[i] + " ";
