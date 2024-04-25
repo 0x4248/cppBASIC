@@ -62,6 +62,20 @@ These can be used in the `PRINT` and `LET` command.
 - `MUL`: Multiply two variables `MUL A B`
 - `DIV`: Divide two variables `DIV A B`
 
+## Building
+
+To build the project, run the following commands:
+
+```bash
+make
+```
+
+To clean the project, run the following commands:
+
+```bash
+make clean
+```
+
 ## Licence
 
 This project is licenced under the GNU General Public Licence v3.0 - see the [LICENCE](LICENCE) file for details
