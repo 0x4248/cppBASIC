@@ -179,9 +179,7 @@ void command_line(){
         std::getline(std::cin, command);
         if(command == "QUIT"){
             break;
-        }
-
-        else if(command == "NEW"){
+        } else if(command == "NEW"){
             lines.clear();
             variables.clear();
             values.clear();
@@ -189,26 +187,18 @@ void command_line(){
                 lines.push_back("");
             }
             std::cout << "PROGRAM CLEARED" << std::endl;
-        }
-
-        else if(command == "LIST"){
+        } else if(command == "LIST"){
             for(int i = 0; i < lines.size(); i++){
                 if (lines[i] == ""){
                     continue;
                 }
                 print(std::to_string(i) + " " + lines[i]);
             }
-        }
-
-        else if(command == "CLEAR"){
+        } else if(command == "CLEAR"){
             std::cout << "\033[2J\033[1;1H";
-        }
-
-        else if(command == "RUN") {
+        } else if(command == "RUN") {
             run_program();
-        }
-
-        else if(isdigit(command[0])){
+        } else if(isdigit(command[0])){
             int line_number = std::stoi(command);
             lines[line_number] = command;
         }
