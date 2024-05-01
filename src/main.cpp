@@ -11,8 +11,8 @@
 #include <sstream>
 #include <thread>
 
-#include "util.h"
-#include "global.h"
+#include "include/util.h"
+#include "include/global.h"
 
 void print(std::string message)
 {
