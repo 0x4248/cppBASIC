@@ -136,7 +136,7 @@ bool is_expression(std::string expression)
 
 void run_program()
 {
-    for (int i = 0; i < lines.size(); i++)
+    for (decltype(lines.size()) i = 0; i < lines.size(); i++)
     {
         if (lines[i] == "")
         {
@@ -176,7 +176,7 @@ void run_program()
             if (tokens[2][0] == '"')
             {
                 std::string output = "";
-                for (int i = 2; i < tokens.size(); i++)
+                for (decltype(tokens.size()) i = 2; i < tokens.size(); i++)
                 {
                     output += tokens[i] + " ";
                 }
@@ -191,7 +191,7 @@ void run_program()
             else if (is_expression(tokens[2]))
             {
                 std::string expression = "";
-                for (int i = 2; i < tokens.size(); i++)
+                for (decltype(tokens.size()) i = 2; i < tokens.size(); i++)
                 {
                     expression += tokens[i] + " ";
                 }
@@ -247,7 +247,7 @@ void command_line()
         }
         else if (command == "LIST")
         {
-            for (int i = 0; i < lines.size(); i++)
+            for (decltype(lines.size()) i = 0; i < lines.size(); i++)
             {
                 if (lines[i] == "")
                 {
