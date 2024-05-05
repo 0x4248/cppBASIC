@@ -20,18 +20,16 @@ TARGET = cppBASIC
 
 all: $(BUILD_DIR)/$(TARGET)
 
+init:
+	mkdir -p $(BUILD_DIR)
+
 $(BUILD_DIR)/$(TARGET): $(OBJ_FILES)
 	$(CXX) $(CXXFLAGS) $(INC_FLAGS) $^ -o $@
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp | init
 	$(CXX) $(CXXFLAGS) $(INC_FLAGS) -c $< -o $@
 
-init:
-	mkdir -p $(BUILD_DIR)
-
-
-.PHONY: init clean
-
 clean:
 	rm -rf $(BUILD_DIR)
 
+.PHONY: init clean
